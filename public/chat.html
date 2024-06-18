@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkFusion - The end of search for the best chat app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2162815465299181"
+     crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link type="image/png" href="assets/logo.png" rel="icon">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-lg bg-white rounded-lg shadow-lg">
+        <!-- Chat Header -->
+        <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+            <img src="assets/logo.png" alt="Logo" class="h-8">
+            <h2 class="text-xl font-semibold">TalkFusion</h2>
+            <button class="text-blue-500 hover:text-blue-700 logout-button" onclick="logoutButtonClick()">Logout</button>
+        </div>
+        <!-- Chat Messages -->
+        <div id="messages" class="p-4 h-96 overflow-y-auto space-y-4">
+            <!-- Messages will be appended here -->
+        </div>
+        <!-- Chat Input -->
+        <div class="p-4 border-t border-gray-200">
+            <form id="message-form" class="flex">
+                <input id="message-input" type="text" class="flex-1 border rounded-l-lg px-4 py-2" placeholder="Type your message..." required>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
